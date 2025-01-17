@@ -1,0 +1,198 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: auto;
+    background-image: url('../pics/IMS.jpeg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Main container setup */
+#main-container {
+    display: flex;
+    min-height: auto;
+}
+
+/* Main content area styling */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+}
+
+.dashboard_topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color:  #3e3d3d;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 10px rgba(255, 0, 255, 0.3);
+    color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.dashboard_topbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 10px;
+}
+ h2 {
+    color: #0ff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; 
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.content-area {
+    max-width: 100%;
+    margin: 1em 0.5em 1em 0.5em;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.low-stock-notification {
+    display: flex;
+    align-items: center;
+    background-color: #cc121e; /* Light blue for info */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Allows positioning of close button */
+}
+
+.low-stock-notification i {
+    font-size: 24px; /* Icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.low-stock-notification span {
+    flex-grow: 1; /* Allows the text to grow and take up space */
+    font-size: 16px; /* Adjust text size */
+}
+
+.low-stock-notification button {
+    background: none; /* No background for button */
+    border: none; /* Remove default border */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 20px; /* Icon size */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.low-stock-notification button:hover {
+    transform: scale(1.2); /* Scale up on hover for emphasis */
+}
+
+.low-stock-list {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: center; /* Center text in the container */
+}
+
+.low-stock-list h3{
+    color: rgb(87, 123, 166);
+    margin-bottom: 0.5em;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; 
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+.low-stock-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    text-align: center; /* Center text in each item */
+}
+
+.low-stock-item:hover {
+    background-color: #f0f0f0;
+}
+
+.order-button {
+    background-color: #28a745;
+    margin-bottom: 1em;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #218838;
+}
+
+
+/* Overlay to darken background when form is active */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 999; /* Ensures it appears above other content */
+}
+
+/* Supplier form centered with flexbox */
+.supplier-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    width: 400px; /* Set width as needed */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Above the overlay */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.supplier-form.active {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+/* Add some spacing and styling to form elements */
+.supplier-form form div {
+    margin-bottom: 15px;
+}
+
+.supplier-form form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.supplier-form form button:hover {
+    background-color: #45a049;
+}

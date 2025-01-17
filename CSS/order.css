@@ -1,0 +1,122 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: auto;
+    background-image: url('../pics/IMS.jpeg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Main container setup */
+#main-container {
+    display: flex;
+    min-height: auto;
+
+}
+
+/* Main content area styling */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+}
+
+.dashboard_topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color:  #3e3d3d;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 10px rgba(255, 0, 255, 0.3);
+    color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.dashboard_topbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 10px;
+}
+ h2 {
+    color: #0ff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; 
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.content-area {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: rgba(43, 43, 43, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.supplier-form {
+    background: rgba(25, 25, 25, 0.9);
+    height: 20em;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 300px;
+}
+
+.supplier-form h2 {
+    color: #00ffcc;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.supplier-form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+select,
+input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #ffffff;
+    transition: background 0.3s;
+}
+select,
+input[type="number"]:focus {
+    background: #444;
+}
+button {
+    background-color: #00ffcc;
+    margin-top: 3em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #00cc99;
+}
