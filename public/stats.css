@@ -1,0 +1,159 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: auto;
+    background-image: url('../pics/IMS.jpeg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#main-container {
+    display: flex;
+    min-height: auto;
+}
+
+/* Main content area styling */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.dashboard_topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color:  #3e3d3d;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 10px rgba(255, 0, 255, 0.3);
+    color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.dashboard_topbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+h2 {
+    color: #0ff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+h3 {
+    color: rgb(17, 18, 18);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+/* Content area */
+.content-area {
+    display: flex;
+    flex-direction: column; /* Ensure the content stacks vertically */
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: rgba(43, 43, 43, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+/* Chart container styling */
+.chart-container {
+    width: 100%;
+    margin-bottom: 30px; /* Space between the chart and the next section */
+}
+
+/* Styling for the Top 5 Products Section */
+.top-products {
+    width: 1000px;;
+    margin-top: 30px;
+    padding: 20px;
+    display: flex; /* Aligns the child divs side by side */
+    justify-content: space-between; /* Adds space between the two product lists */
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);
+}
+
+.product-list {
+    flex: 1; /* Ensures each div takes equal space */
+    margin-right: 100px; /* Adds space between the two lists */
+}
+.product-list h4{
+   
+    color: #0ff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.product-list:last-child {
+    margin-right: 0; /* Removes the margin on the last item */
+}
+
+.product-list h4 {
+    margin-bottom: 10px;
+}
+
+.product-list ul {
+    padding: 0;
+    list-style: none;
+}
+
+.product-list ul li {
+    background-color: #444;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.product-list ul li:hover{
+    background-color: hwb(202 15% 56%);
+    border-left: 5px solid #fff;
+}
+
+/* Notification styling */
+.notification.success {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.notification.error {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
